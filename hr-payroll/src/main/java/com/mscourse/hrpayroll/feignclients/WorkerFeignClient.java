@@ -12,7 +12,7 @@ import com.mscourse.hrpayroll.entities.Worker;
 
 
 @Component
-@FeignClient(name="hr-worker", url="localhost:8001", path = "/workers") // name = projeto.resources.application.properties.spring.application.name
+@FeignClient(name="hr-worker", path = "/workers") // name = projeto.resources.application.properties.spring.application.name
 public interface WorkerFeignClient {
 	
 	@RequestMapping(method=RequestMethod.GET, value="/{id}")
